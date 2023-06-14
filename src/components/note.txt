@@ -32,3 +32,13 @@
     const newKeyword = filterKeywords.filter((key)!=data)
     setFilterKeywords(newKeyword)
   }
+
+10. to clear all we call a function and set the useState function as empty
+ --- const clear =(){
+  setFilterKeywords([])
+ }
+
+ 11. create a function called modified data and create a state called filtereddata to store the datas 
+   . if there are any keywords then we will filter the data coming from props else set the datas 
+   . if the condition is true then it will filter the data and checks for every keywords if the keywords 
+    includes or equals the keywords then it will filter out the datas and finally set the state to newData

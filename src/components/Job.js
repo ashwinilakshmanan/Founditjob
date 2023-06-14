@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-
+import '../components/job.css'
 
 function Job(props) {
     const {
@@ -31,7 +31,7 @@ function Job(props) {
     },[logo])
   return (
     <>
-    <div className='job-container'>
+    <div className='job-container text-color'>
         <div className='logo'>
             <img src={icon} alt='logo'/>
         </div>
@@ -52,7 +52,7 @@ function Job(props) {
                 {
                   keywords.map((key,id)=>{
                     return(
-                      <button key={id} onClick={()=>props.setKeywords(key)}>{key}</button>
+                      <button className='butn' key={id} onClick={()=>props.setKeywords(key)}>{key}</button>
                     )
                     
                   })
