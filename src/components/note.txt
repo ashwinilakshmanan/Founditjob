@@ -1,0 +1,34 @@
+1. install the sass 
+2. creat the components
+3. inside the componets create a folder for the images
+4. we can import the svg files inside the components by importing install
+    --- const importSvgs = () =>{
+        const logoSvg = import(`${logo}`).then(d=> 
+        console.log(d)
+        setIcon(d.default)
+        )
+    }
+
+    we want to give this file inside the useeffect function b'cse when ever the page is rensering then it will call the functions
+   
+     useEffect(()=>{
+        importSvgs();
+    },[logo])
+
+5. create a useState for filterKeywords  this will contain an array of keywords(fe,html,css...)
+6. create a method called add filter to pass the array of key words .
+   using this keyword we will pass data as arguments we will add new filter keyword methods.
+7.check the filter component contains the data if there is no data then we will add the data's to it
+
+  ---if(!filterKeywords.includes(data)){
+    setFilterKeywords([...filterKeyword,data])
+  }
+
+8. createa header component then we render the header component only when the user will adds new keywords to the filter component state 
+    so we will check the length will be greater than 0   then pass the filter keyword methods and functions to the job components
+
+9. add a method to delete a perticular keyword
+  ---- const deleteKeyword=(data)=>{
+    const newKeyword = filterKeywords.filter((key)!=data)
+    setFilterKeywords(newKeyword)
+  }
