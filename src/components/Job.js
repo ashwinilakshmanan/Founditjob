@@ -44,7 +44,9 @@ function Job(props) {
             <div className='position'>{position}</div>
             <div className='details'>
               <span>{postedAt}</span>
+              <span>&nbsp;•&nbsp;</span>
               <span>{contract}</span>
+              <span>&nbsp;•&nbsp;</span>
               <span>{location}</span>
             </div>
 

@@ -34,7 +34,7 @@ function Jobs({ data, setKeywords, keywords }) {
   return (
     <>
       
-      <div className="jobs-container">
+      <div className="jobs-container ">
         {filteredData.map((d) => {
           return <Job key ={d.id} data={d} setKeywords={setKeywords} />;
         })}
